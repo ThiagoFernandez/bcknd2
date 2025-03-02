@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+<div class="card card-sm">
+  <!-- Información del usuario -->
+  <p><strong>Nombre:</strong> {{user.first_name}}</p>
+  <p><strong>Apellido:</strong> {{user.last_name}}</p>
+  <p><strong>Correo electrónico:</strong> {{user.email}}</p>
+  <p><strong>Edad:</strong> {{user.age}}</p>
+  <p><strong>Rol:</strong> {{user.role}}</p>
+
+  <!-- Botón para cerrar sesión -->
+  <form action="/logout" method="get">
+    <button type="submit">Salir</button>
+  </form>
+</div>

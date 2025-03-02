@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+
+<div class="container">
+  <div class="card card-sm">
+    <!-- Mostrar mensaje de error si existe -->
+    {{#if error}}
+      <div class="error-message" style="color: red; margin-bottom: 20px;">
+        {{error}}
+      </div>
+    {{/if}}
+
+    <form action="/api/users/register" method="post">
+      <label for="first_name">First Name</label>
+      <input type="text" name="first_name" id="first_name" required />
+
+      <label for="last_name">Last Name</label>
+      <input type="text" name="last_name" id="last_name" required />
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required />
+
+      <label for="age">Age</label>
+      <input type="number" name="age" id="age" min="0" required />
+
+      <label for="role">Role</label>
+      <input type="text" name="role" id="role" value="user" required />
+
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required />
+
+      <!-- Botón de envío -->
+      <div class="button-container" style="margin-top: 20px;">
+        <button type="submit" class="right">Register</button>
+      </div>
+    </form>
+  </div>
+</div>
